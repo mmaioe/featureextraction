@@ -1,3 +1,5 @@
+unmanagedBase := baseDirectory.value / "custom_lib"
+
 lazy val root = Project( id="featureextraction",  base=file(".")).
   settings(
     name := "featureextraction",
