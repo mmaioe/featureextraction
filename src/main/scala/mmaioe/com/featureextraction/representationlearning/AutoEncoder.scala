@@ -20,20 +20,6 @@ class AutoEncoder(numOfInputs: Int, numOfOutputs: Int, layerNumOfOutputs: List[I
   val seed = 123
   val iterations = 2
 
-//  val conf: MultiLayerConfiguration = new NeuralNetConfiguration.Builder()
-//                .seed(seed)
-//                .iterations(iterations)
-//                .optimizationAlgo(OptimizationAlgorithm.LINE_GRADIENT_DESCENT)
-//                .list(6)
-//                .layer(0, new RBM.Builder().nIn(numOfInputs).nOut((numOfInputs*1.5).toInt).lossFunction(LossFunctions.LossFunction.RMSE_XENT).build())
-//                .layer(1, new RBM.Builder().nIn((numOfInputs*1.5).toInt).nOut((numOfInputs/2).toInt).lossFunction(LossFunctions.LossFunction.RMSE_XENT).build())
-//                .layer(2, new RBM.Builder().nIn((numOfInputs/2).toInt).nOut(numOfOutputs).lossFunction(LossFunctions.LossFunction.RMSE_XENT).build()) //encoding stops
-//                .layer(3, new RBM.Builder().nIn(numOfOutputs).nOut((numOfInputs/2).toInt).lossFunction(LossFunctions.LossFunction.RMSE_XENT).build()) //decoding starts
-//                .layer(4, new RBM.Builder().nIn((numOfInputs/2).toInt).nOut((numOfInputs*1.5).toInt).lossFunction(LossFunctions.LossFunction.RMSE_XENT).build())
-//                .layer(5, new OutputLayer.Builder(LossFunctions.LossFunction.RMSE_XENT).nIn((numOfInputs*1.5).toInt).nOut(numOfInputs).build())
-//                .pretrain(true).backprop(true)
-//                .build()
-
          var listBuilder =  new NeuralNetConfiguration.Builder()
                           .seed(seed)
                           .iterations(iterations)

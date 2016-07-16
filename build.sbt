@@ -1,3 +1,5 @@
+unmanagedBase := baseDirectory.value / "custom_lib"
+
 lazy val root = Project( id="featureextraction",  base=file(".")).
   settings(
     name := "featureextraction",
@@ -13,7 +15,8 @@ lazy val root = Project( id="featureextraction",  base=file(".")).
       "org.deeplearning4j" % "deeplearning4j-ui" % "0.4-rc3.8",
       "org.jblas" % "jblas" % "1.2.4",
       "org.nd4j" % "canova-nd4j-codec" % "0.0.0.14",
-      "org.nd4j" % "nd4j-x86" % "0.4-rc3.8"
+      "org.nd4j" % "nd4j-x86" % "0.4-rc3.8",
+      "com.mkobos" % "pca_transform" % "1.0"
     )
   )
 
